@@ -20,7 +20,7 @@ pipeline {
               Statement stmt=con.createStatement();  
               ResultSet rs=stmt.executeQuery("show databases");  
               while(rs.next())  
-              println(rs.getInt(1));  
+              println(rs.getInt(0));  
               con.close();  
               }catch(Exception e){ System.out.println(e);}  
 
