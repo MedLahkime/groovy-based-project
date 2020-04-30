@@ -26,7 +26,7 @@ def sql
 		def countT = [:]
 		
 		
-		folderName = "/temp_sql_scripts/"
+		folderName = "temp_sql_scripts/"
 		def exportFolder = 'generete'
 		
 		
