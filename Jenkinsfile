@@ -7,7 +7,7 @@ pipeline {
       stage('Hello') {
          steps {
             script {
-		def foundDbs = []
+		/*def foundDbs = []
 		def finalTables = []
 		def finalViews = []
 		def finalTriggers =[]
@@ -45,7 +45,7 @@ pipeline {
 			  println tableSchemas
               }catch(Exception e){ System.out.println(e);} 
 			  
-			  
+		*/	  
 			  
 			  def sqlFolder = new File(folderName)
 			  text=''
