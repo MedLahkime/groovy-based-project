@@ -17,6 +17,7 @@ pipeline {
               Connection con=DriverManager.getConnection(  
               "jdbc:mysql://localhost:3306/","root","med123");  
               //here sonoo is database name, root is username and password  
+                 println "start"
               Statement stmt=con.createStatement();  
               ResultSet rs=stmt.executeQuery("show databases");  
               while(rs.next())  
