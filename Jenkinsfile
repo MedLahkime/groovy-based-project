@@ -1,0 +1,33 @@
+import java.sql.*;
+
+def tableSchemas
+pipeline {
+   agent any
+
+   stages {
+      stage('Hello') {
+         steps {
+            script {
+
+
+
+
+              try{  
+              Class.forName("com.mysql.jdbc.Driver");  
+              Connection con=DriverManager.getConnection(  
+              "jdbc:mysql://localhost:3306/db","root","med123");  
+              //here sonoo is database name, root is username and password  
+              Statement stmt=con.createStatement();  
+              ResultSet rs=stmt.executeQuery("select * from person");  
+              while(rs.next())  
+              println(rs.getInt(1)+"  "+rs.getString(2));  
+              con.close();  
+              }catch(Exception e){ System.out.println(e);}  
+
+
+
+            }
+         }
+      }
+   }
+}
