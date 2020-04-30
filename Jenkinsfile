@@ -1,6 +1,5 @@
 import java.sql.*;
 
-def tableSchemas
 pipeline {
    agent any
 
