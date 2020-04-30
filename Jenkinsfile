@@ -26,7 +26,7 @@ def sql
 		def countT = [:]
 		
 		
-		folderName = "temp_sql_scripts/"
+		folderName = "https://github.com/MedLahkime/groovy-based-project/tree/master/temp_sql_scripts/"
 		def exportFolder = 'generete'
 		
 		
