@@ -15,12 +15,12 @@ pipeline {
               try{  
               Class.forName("com.mysql.jdbc.Driver");  
               Connection con=DriverManager.getConnection(  
-              "jdbc:mysql://localhost:3306/db","root","med123");  
+              "jdbc:mysql://localhost:3306/","root","med123");  
               //here sonoo is database name, root is username and password  
               Statement stmt=con.createStatement();  
-              ResultSet rs=stmt.executeQuery("select * from person");  
+              ResultSet rs=stmt.executeQuery("show databases");  
               while(rs.next())  
-              println(rs.getInt(1)+"  "+rs.getString(2));  
+              println(rs.getInt(1));  
               con.close();  
               }catch(Exception e){ System.out.println(e);}  
 
