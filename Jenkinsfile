@@ -7,7 +7,6 @@ pipeline {
       stage('Hello') {
          steps {
             script {
-def sql
 		def foundDbs = []
 		def finalTables = []
 		def finalViews = []
@@ -52,26 +51,10 @@ def sql
 			  text=''
 			  sqlFolder.eachFile{
 				  println it
-				  tableCounter.add(it.toString())
-				  text = it.getText('UTF-8')
-				  listOfScripts.add(text.toLowerCase())
+				  //tableCounter.add(it.toString())
+				 // text = it.getText('UTF-8')
+				 // listOfScripts.add(text.toLowerCase())
 			  }
-			  
-			  for(def int i=0 ; i<listOfScripts.size() ; i++){
-				  listOfScripts[i] = listOfScripts[i].replaceAll("[^a-zA-Z0-9_]", " ")
-				  listOfScripts[i] = listOfScripts[i].replaceAll(" +", " ")
-				  listOfScripts[i] = listOfScripts[i].split(" ")
-			  }
-			  
-			  for(def int i=0 ; i<tableSchemas.size() ; i++)
-				  for(def int j=0 ; j<listOfScripts.size() ; j++)
-					  for(def int k=0 ; k<listOfScripts[j].size() ; k++)
-						  if(listOfScripts[j][k].equals(tableSchemas[i])){
-							  foundDbs.add(tableSchemas[i])
-						  }
-			  foundDbs = foundDbs.unique()
-			  
-			  println foundDbs
 
             }
          }
