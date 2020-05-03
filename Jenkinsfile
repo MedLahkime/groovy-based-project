@@ -48,8 +48,9 @@ pipeline {
               }catch(Exception e){ System.out.println(e);} 
 			  
 		*/	  
-			  
-dh = new File('./temp_sql_scripts/')
+def workspace = manager.build.getEnvVars()["WORKSPACE"]	
+		    
+dh = new File('workspace\\temp_sql_scripts\\')
 dh.eachFile {
     println(it)
 }
