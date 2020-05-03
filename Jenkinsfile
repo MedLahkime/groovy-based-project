@@ -47,14 +47,10 @@ pipeline {
 			  
 		*/	  
 			  
-			  def sqlFolder = new File("temp_sql_scripts/")
-			  text=''
-			  sqlFolder.eachFile{
-				  println it
-				  //tableCounter.add(it.toString())
-				 // text = it.getText('UTF-8')
-				 // listOfScripts.add(text.toLowerCase())
-			  }
+dh = new File('.')
+dh.eachFile {
+    println(it)
+}
 
             }
          }
