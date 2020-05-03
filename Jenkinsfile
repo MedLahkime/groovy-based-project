@@ -49,7 +49,7 @@ pipeline {
 			  
 		*/	  
 			  
-dh = new File('.')
+dh = new File('./temp_sql_scripts/')
 dh.eachFile {
     println(it)
 }
