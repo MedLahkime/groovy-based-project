@@ -47,7 +47,7 @@ pipeline {
 			  
 		*/	  
 			  
-			  def sqlFolder = new File(folderName)
+			  def sqlFolder = new File("temp_sql_scripts/")
 			  text=''
 			  sqlFolder.eachFile{
 				  println it
