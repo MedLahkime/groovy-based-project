@@ -6,7 +6,10 @@ pipeline {
    stages {
 	   stage('one'){
 		   steps{
-		      println 'hhhh'			   
+		      script {
+				File fh1 = new File('test.groovy')
+				text = fh1.getText('UTF-8')
+				}		   
 		   }
 	   }
 
