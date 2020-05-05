@@ -1,1 +1,3 @@
-println 'Hello'
+def sayHello(){
+  println 'Hello'
+}
