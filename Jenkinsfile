@@ -4,10 +4,9 @@ pipeline {
 	PATH = "C:\\Program Files\\Git\\usr\\bin;C:\\Program Files\\Git\\bin;${env.PATH}"
 	 }
    stages {
-      stage('Load') {
-  	 def code = load 'test.groovy'
-	      
-	      code.example2()
-  }
+      script {
+	      	File fh1 = new File('test.groovy')
+		text = fh1.getText('UTF-8')
+  		}
          }
 }
