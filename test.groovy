@@ -2,9 +2,6 @@ import groovy.sql.Sql
 import java.sql.DriverManager
 import java.io.File; 
 
-
-class DbClone {
-
 	def sql
 	def foundDbs = []
 	def finalTables = []
@@ -407,5 +404,4 @@ class DbClone {
 	}
 	//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 	def getMySqlFunctions(String folderName ,String exportFolder){}
-}
 return this
