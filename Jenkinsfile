@@ -9,8 +9,8 @@ pipeline {
 	   stage('one'){
 		   steps{
 		      script {
-				File fh1 = new File('test.groovy')
-				text = fh1.getText('UTF-8')
+				def workspace = pwd()
+			      println workspace
 				}		   
 		   }
 	   }
