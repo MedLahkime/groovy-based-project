@@ -1,5 +1,5 @@
 def pipeline
     node('master') {
-        def dbclone = load 'test.groovy'
-        dbclone.sayHello()
+        def dbclone = load 'class_script.groovy'
+        dbclone.startgvyscript()
     }
