@@ -5,3 +5,4 @@ def tools = new GroovyScriptEngine( '.' ).with {
 this.metaClass.mixin tools
 greet()
 }
+return this
