@@ -1,5 +1,5 @@
 def pipeline
-    node('slave') {
+    node('master') {
         pipeline = load 'test.groovy'
         pipeline.sayHello()
     }
