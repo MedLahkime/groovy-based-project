@@ -4,4 +4,7 @@ def sayHello(string user){
 def sayHello2(){
   println 'hello2'
 }
-return this
+return [
+    sayHello: this.&sayHello,
+    sayHello2: this.&sayHello2
+]
