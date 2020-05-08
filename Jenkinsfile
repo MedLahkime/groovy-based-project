@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage('checkout git') {
             steps {
-                bat 'sh ls'
+                bat 'groovy DbCloneCaller.groovy'
             }
         }
     }
