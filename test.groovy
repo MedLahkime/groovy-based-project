@@ -1,5 +1,5 @@
-def sayHello(){
-  println 'Hello'
+def sayHello(string user){
+  println 'Hello ' + user
 }
 def sayHello2(){
   println 'hello2'
