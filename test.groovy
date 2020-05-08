@@ -1,4 +1,4 @@
-def sayHello(string user){
-  println 'Hello ' + user
+def sayHello(){
+  println 'Hello '
 }
 return this
